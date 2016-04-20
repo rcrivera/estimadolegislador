@@ -15,14 +15,14 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.signedIn()"><a href="" ng-click="nav.openLogin()">Iniciar sesión</a></li>
-        <li ng-hide="nav.signedIn()"><a href="" ng-click="nav.openRegister()">Registrate</a></li>
-        <li ng-show="nav.signedIn()"><a href="">{{ nav.user.email }}</a></li>
-        <li ng-show="nav.signedIn()"><a ng-click="nav.logout()">Log Out</a></li>
+        <li><a ui-sref="contacts.index">Contactos</a></li>
+        <li><a ui-sref="messages.index">Mensajes</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li ng-show="nav.signedIn()"><a ui-sref="contacts.index">Contactos</a></li>
-        <li ng-show="nav.signedIn()"><a ui-sref="messages.index">Mensajes</a></li>
+        <li ng-hide="nav.signedIn()"><a href="" ng-click="nav.openLogin()">Iniciar sesión</a></li>
+        <li ng-hide="nav.signedIn()"><a href="" ng-click="nav.openRegister()">Registrate</a></li>
+        <li ng-if="nav.signedIn()"><a href="">{{ nav.user.email }}</a></li>
+        <li ng-if="nav.signedIn()"><a ng-click="nav.logout()">Log Out</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

@@ -1,17 +1,21 @@
 <div class="modal-padding">
-<h1 class="modal-title">Regίstrese</h1>
+    <h1 class="modal-title">Regίstrese</h1>
 
-<form ng-submit="vm.register()" class="modal-form">
-  <div class="form-group">
-    <label for="email">Email</label><span class="error-label"> {{ vm.user.errors.email[0] }}</span>
-    <input type="email" id="email" class="form-control" placeholder="Email" ng-model="vm.user.email">
-  </div>
-  <div class="form-group">
-    <label for="password">Contraseña</label><span class="error-label"> {{ vm.user.errors.password[0] }}</span>
-    <input type="password" id="password" class="form-control" placeholder="Contraseña" ng-model="vm.user.password">
-  </div>
-  <div class="action-buttons">
-    <input type="submit" class="btn btn-default" value="Crear Cuenta">
-  </div>
-</form>
+    <form ng-submit="vm.register()" class="modal-form">
+        <div class="form-group">
+          <label for="name">Nombre</label><span class="error-label"> {{ vm.user.errors.name }}</span>
+          <input type="text" id="name" class="form-control" placeholder="Nombre" ng-model="vm.user.name">
+        </div>
+      <div class="form-group">
+        <label for="email">Email</label><span class="error-label"> {{ vm.user.errors.email[0] }}</span>
+        <input type="email" id="email" class="form-control" placeholder="Email" ng-model="vm.user.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label><span class="error-label"> {{ vm.user.errors.password[0] }}</span>
+        <input type="password" id="password" class="form-control" placeholder="Contraseña" ng-model="vm.user.password">
+      </div>
+      <div class="action-buttons">
+        <input type="submit" class="btn btn-default" value="Crear Cuenta">
+      </div>
+    </form>
 </div>
